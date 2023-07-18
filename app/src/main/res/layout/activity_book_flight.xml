@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/book_flight_background"
+    tools:context=".BookFlight">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/book_fight_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/book_flight_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tool_bar_start"
+            android:layout_marginTop="@dimen/tool_bar_top"
+            android:layout_marginEnd="@dimen/tool_bar_end"
+            android:layout_marginBottom="@dimen/tool_bar_bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/book_flight_title"
+                android:textSize="@dimen/book_flight_size"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/book_flight_background"
+                android:src="@drawable/ic_hamburger" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/book_flight_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/tab_bar_start"
+        android:layout_marginTop="@dimen/tab_bar_top"
+        android:layout_marginEnd="@dimen/tab_bar_end"
+        android:background="@drawable/rounded_corner_tab_layout"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintTop_toBottomOf="@id/book_fight_app_bar"
+        app:tabBackground="@drawable/ic_book_flight_tab_layout_selector"
+        app:tabIndicatorHeight="@dimen/tab_indicator_height"
+        app:tabRippleColor="@color/book_flight_background"
+        app:tabTextColor="@color/grey">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one_way" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_flight_round" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_flight_multicity" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_view_top_start_end"
+        android:layout_marginTop="@dimen/card_view_top_start_end"
+        android:layout_marginEnd="@dimen/card_view_top_start_end"
+        android:elevation="@dimen/card_view_top_start_end"
+        app:cardElevation="@dimen/card_elevation"
+        app:layout_constraintTop_toBottomOf="@+id/book_flight_tab_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="@dimen/card_view_top_start_end"
+            tools:ignore="ExtraText">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/enter_source"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/book_flight_background"
+                android:outlineSpotShadowColor="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.22"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconDrawable="@drawable/ic_airplanetakeoff">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/source" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/enter_destination"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/destination_top_margin"
+                android:background="@color/book_flight_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.22"
+                app:layout_constraintStart_toStartOf="@id/enter_source"
+                app:layout_constraintTop_toBottomOf="@id/enter_source"
+                app:startIconDrawable="@drawable/ic_airplanelanding">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/destination" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:layout_width="@dimen/constrained_dimension"
+                android:layout_height="@dimen/constrained_dimension"
+                android:layout_marginTop="@dimen/arrow_top"
+                android:layout_marginEnd="@dimen/arrow_end"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/enter_source"
+                app:layout_constraintHeight_percent="0.16"
+                app:layout_constraintTop_toTopOf="@+id/enter_source" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:layout_width="@dimen/constrained_dimension"
+                android:layout_height="@dimen/constrained_dimension"
+                android:layout_marginTop="@dimen/destination_top_margin"
+                android:background="@drawable/spinner_shape"
+                app:layout_constraintHeight_percent="0.18"
+                app:layout_constraintStart_toStartOf="@+id/enter_destination"
+                app:layout_constraintTop_toBottomOf="@id/enter_destination"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/constrained_dimension"
+                android:layout_marginTop="@dimen/destination_top_margin"
+                android:backgroundTint="@color/rounded_tab_selected_color"
+                android:text="@string/btn_search"
+                android:textSize="@dimen/btn_title_size"
+                app:cornerRadius="@dimen/button_radius"
+                app:layout_constraintHeight_percent="0.19"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
