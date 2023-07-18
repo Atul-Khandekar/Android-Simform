@@ -31,6 +31,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.example.trainingproject.views.CalculatorActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Shopkart.Exercise" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${packageName}.fileProvider"
