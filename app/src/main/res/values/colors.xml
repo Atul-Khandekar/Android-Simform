@@ -7,4 +7,12 @@
     <color name="rounded_tab_selected_color">#EC441E</color>
     <color name="book_flight_background">#FFF7F5</color>
     <color name="grey">#999999</color>
+    <color name="primary_color">#53B175</color>
+    <color name="placeholder_color">#C8C8C8</color>
+    <color name="btn_continue_google_background">#1C1C1C</color>
+    <color name="trolley_primary">#EE4068</color>
+    <color name="product_background">#F2F3F2</color>
+    <color name="add_to_basket_background_color">#53B175</color>
+    <color name="card_border_color">#E2E2E2</color>
+    <color name="secondary_color">#ABF4A9</color>
 </resources>

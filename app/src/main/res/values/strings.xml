@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">TrainingProject</string>
     <string name="title">Gemini</string>
-    <string name ="limit">Limit</string>
-    <string name ="market">Market</string>
-    <string name ="pool">Pool</string>
-    <string name ="info">Info</string>
+    <string name="limit">Limit</string>
+    <string name="market">Market</string>
+    <string name="pool">Pool</string>
+    <string name="info">Info</string>
     <string name="exchange">Exchange</string>
     <string name="book_flight_title">Book Flight</string>
     <string name="one_way">One Way</string>
@@ -13,4 +13,74 @@
     <string name="source">Enter source</string>
     <string name="destination">Enter Destination</string>
     <string name="btn_search">Search</string>
+
+    <string name="register">Register</string>
+    <string name="subtitle">Create an account to access all the features of Maxpense!</string>
+    <string name="email">Email</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_password">Your Password</string>
+    <string name="placeholder_email">Ex: abc@example.com</string>
+    <string name="placeholder_name">Ex. Saul Ramirez</string>
+    <string name="placeholder_password">*******</string>
+    <string name="login_title">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="login_subtitle">Login now to track all your expenses and income at a place!</string>
+    <string name="forgot_password"> Forgot password?</string>
+    <string name="continue_google">Continue with Google</string>
+    <string name="register_new_account">Don\'t Have an account?</string>
+    <string name="btn_login_title">Login</string>
+    <string name="forgot_password_title">Forgot Password?</string>
+    <string name="forgot_password_subtitle">Recover you password if you have forgot the password!</string>
+    <string name="submit_title">Submit</string>
+    <string name="main_activity_register">MainActivity</string>
+    <string name="login_activity">LoginActivity</string>
+    <string name="forgot_password_activity">ForgotPasswordActivity</string>
+    <string name="to_login">Login</string>
+    <string name="to_register">Register</string>
+    <string name="btn_add_description">add to cart</string>
+    <string name="description">Description</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="birth_date">Date Of Birth</string>
+    <string name="placeholder_birth_date">MM/DD/YYYY</string>
+    <string name="first_number">Number: 1</string>
+    <string name="second_number">Number: 2</string>
+    <string name="image_list">Avatar List</string>
+    <string name="number_list">Number List</string>
+    <string name="result">Result</string>
+    <string name="text_view_first_number">First Number:</string>
+    <string name="text_view_second_number">Second Number:</string>
+    <string name="text_view_result">Result:</string>
+
+    <string name="product_title">Natural Red Apple </string>
+    <string name="product_description"> 1kg, Price</string>
+    <string name="product_count">1</string>
+    <string name="product_price">$4.99</string>
+    <string name="product_detail_text">Product Details</string>
+    <string name="product_description_paragraph">Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.</string>
+    <string name="nutrition">Nutritions</string>
+    <string name="review">Review</string>
+    <string name="add_to_basket">Add To Basket</string>
+
+    <string name="shop">Shop</string>
+    <string name="explore">Explore</string>
+    <string name="cart">Cart</string>
+    <string name="favourite">Favourite</string>
+    <string name="account">Account</string>
+    <string name="gallery">Gallery</string>
+    <string name="add_message">Add Message</string>
+    <string name="view_message">View Message</string>
+    <string name="placeholder_add_message">Enter message</string>
+    <string name="image_not_found">Image not found</string>
+    <string name="message">Message: </string>
+    <string name="content_description">content description</string>
+
+    <string name="first_name">First name</string>
+    <string name="last_name">Last Name</string>
+    <string name="exercise">Exercise</string>
+    <string name="login_activity_title">LoginActivity</string>
+    <string name="exercise_activity_title">ExerciseActivity</string>
+    <string name="recycler_view_title">Recycler View</string>
+
 </resources>

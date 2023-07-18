@@ -3,6 +3,7 @@ package com.example.trainingproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.shopkart.R
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
