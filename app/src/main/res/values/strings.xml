@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">TrainingProject</string>
+    <string name="title">Gemini</string>
+    <string name ="limit">Limit</string>
+    <string name ="market">Market</string>
+    <string name ="pool">Pool</string>
+    <string name ="info">Info</string>
+    <string name="exchange">Exchange</string>
+    <string name="book_flight_title">Book Flight</string>
+    <string name="one_way">One Way</string>
+    <string name="book_flight_round">Round</string>
+    <string name="book_flight_multicity">Multicity</string>
+    <string name="source">Enter source</string>
+    <string name="destination">Enter Destination</string>
+    <string name="btn_search">Search</string>
 </resources>
