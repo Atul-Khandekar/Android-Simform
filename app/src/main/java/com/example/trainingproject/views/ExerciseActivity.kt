@@ -1,4 +1,4 @@
-package com.example.shopkart.views
+package com.example.trainingproject.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

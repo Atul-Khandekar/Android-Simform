@@ -1,67 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tradingAppBackground"
-    tools:context=".MainActivity"
-    >
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    tools:context="com.example.trainingproject.views.MainActivity">
 
-        <ImageButton
-            android:id="@+id/btnMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="24dp"
-            android:background="@color/tradingAppBackground"
-            android:src="@drawable/ic_menu" />
+  <include
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:id="@+id/tool_bar_main"
+      layout="@layout/tool_bar"
+      />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/title"
-            android:textColor="@color/white"
-            android:textFontWeight="900"
-            android:textSize="25sp" />
+  <androidx.fragment.app.FragmentContainerView
+      android:id="@+id/navHostFragment"
+      android:name="androidx.navigation.fragment.NavHostFragment"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:defaultNavHost="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tool_bar_main"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:navGraph="@navigation/app_navigation" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginEnd="24dp"
-            android:background="@color/tradingAppBackground"
-            android:src="@drawable/ic_notification" />
-
-    </com.google.android.material.appbar.MaterialToolbar>
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolBar"
-        android:layout_marginStart="25dp"
-        android:background="@color/tradingAppBackground"
-        app:tabBackground="@drawable/selectors"
-        app:tabGravity="start"
-        app:tabIndicatorHeight="0dp"
-        app:tabSelectedTextColor="@color/white">
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <TextView
-        android:id="@+id/txtExchange"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tabBar"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/exchange"
-        android:textColor="@color/white"
-        android:textSize="24sp" />
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

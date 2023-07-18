@@ -17,6 +17,6 @@
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_trolley</item>
         <item name="windowSplashScreenAnimationDuration">300</item>
-        <item name="postSplashScreenTheme">@style/Theme.TradingApp</item>
+        <item name="postSplashScreenTheme">@style/Theme.Shopkart.Exercise</item>
     </style>
 </resources>

@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.shopkart.adapters.SpinnerAdapter
 import com.example.shopkart.databinding.CalculatorRowItemBinding
 import com.example.trainingproject.models.CalculatorDataModel
 import com.example.trainingproject.models.ImageDataModel
