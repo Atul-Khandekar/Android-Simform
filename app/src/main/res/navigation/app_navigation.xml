@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/register_fragment"
+        android:name="com.example.shopkart.views.RegisterFragment"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_register_fragment_to_login_fragment"
+            app:destination="@+id/login_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.example.shopkart.views.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_fragment_to_forgot_password_fragment"
+            app:destination="@+id/forgot_password_fragment" />
+        <action
+            android:id="@+id/action_login_fragment_to_register_fragmet"
+            app:destination="@+id/register_fragment"/>
+
+        <action
+            android:id="@+id/action_login_fragment_to_home_screen_fragment"
+            app:destination="@+id/fragment_home_screen"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgot_password_fragment"
+        android:name="com.example.shopkart.views.ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+
+        <action
+            android:id="@+id/action_forgot_password_to_register_fragment"
+            app:destination="@+id/register_fragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_home_screen"
+        android:name="com.example.shopkart.views.HomeScreenFragment"
+        tools:layout="@layout/fragment_home_screen">
+        <action
+            android:id="@+id/action_fragment_home_screen_to_fragment_details"
+            app:destination="@id/fragment_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_details"
+        android:name="com.example.shopkart.views.DetailsFragment"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="index"
+            app:argType="integer" />
+    </fragment>
+
+
+</navigation>

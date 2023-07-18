@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="text_field_style" parent="Widget.AppCompat.EditText">
+        <item name="cornerRadius">@dimen/text_field_radius</item>
+        <item name="strokeColor">@color/primary_color</item>
+        <item name="placeholderTextColor">@color/placeholder_color</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+    <style name="text_view_labels" parent="Widget.MaterialComponents.TextView">
+    </style>
+
+    <style name="Theme.TradingApp." parent="Base.Theme.TrainingProject">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="circular_profile" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerFamily">rounded</item>
+    </style>
+</resources>
