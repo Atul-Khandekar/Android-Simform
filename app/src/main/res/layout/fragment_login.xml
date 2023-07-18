@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="@dimen/constraint_layout_padding_start"
+        android:paddingEnd="@dimen/constraint_layout_padding_end"
+        android:paddingBottom="@dimen/constraint_layout_padding_start"
+        tools:context=".views.LoginActivity">
+
+        <ProgressBar
+            android:id="@+id/login_progress_bar"
+            android:layout_width="@dimen/height"
+            android:layout_height="@dimen/height"
+            app:layout_constraintStart_toStartOf="@id/forgot_password"
+            app:layout_constraintTop_toBottomOf="@id/forgot_password"
+            android:layout_marginTop="@dimen/text_fields_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:indeterminateTint="@color/primary_color"
+            android:visibility="gone"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/login_activity_login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_title_margin_top"
+            android:text="@string/login"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/title_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/login_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_subtitle_margin_top"
+            android:text="@string/login_subtitle"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="@id/login_activity_login_title"
+            app:layout_constraintTop_toBottomOf="@id/login_activity_login_title"
+            app:layout_constraintWidth_percent="0.85" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/login_activity_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/email_margin_top"
+            android:text="@string/email"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="@+id/login_subtitle"
+            app:layout_constraintTop_toBottomOf="@id/login_subtitle" />
+
+
+        <EditText
+            android:id="@+id/login_activity_email_text_field"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height"
+            android:layout_marginTop="@dimen/label_text_input_margin_top"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/shape_text_field"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:hint="@string/placeholder_email"
+            android:importantForAutofill="no"
+            android:inputType="textWebEmailAddress"
+            android:maxLength="30"
+            android:paddingStart="@dimen/text_field_padding_start"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="@id/login_activity_email"
+            app:layout_constraintTop_toBottomOf="@id/login_activity_email"
+            tools:ignore="RtlSymmetry,VisualLintTextFieldSize" />
+
+        <TextView
+            android:id="@+id/login_activity_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_fields_margin_top"
+            android:text="@string/your_password"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="@id/login_activity_email_text_field"
+            app:layout_constraintTop_toBottomOf="@id/login_activity_email_text_field" />
+
+
+        <EditText
+            android:id="@+id/login_activity_password_text_field"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height"
+            android:layout_marginTop="@dimen/label_text_input_margin_top"
+            android:autofillHints=""
+            android:background="@drawable/shape_text_field"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:hint="@string/placeholder_password"
+            android:inputType="numberPassword"
+            android:maxLength="8"
+            android:paddingStart="@dimen/text_field_padding_start"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="@id/login_activity_password"
+            app:layout_constraintTop_toBottomOf="@id/login_activity_password"
+            tools:ignore="RtlSymmetry,VisualLintTextFieldSize" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_text_input_margin_top"
+            android:text="@string/forgot_password"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/text_size_link"
+            app:layout_constraintStart_toStartOf="@id/login_activity_password_text_field"
+            app:layout_constraintTop_toBottomOf="@+id/login_activity_password_text_field" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height"
+            android:layout_marginTop="@dimen/text_fields_margin_top"
+            android:text="@string/btn_login_title"
+            app:cornerRadius="@dimen/text_field_radius"
+            app:layout_constraintStart_toStartOf="@id/forgot_password"
+            app:layout_constraintTop_toBottomOf="@id/forgot_password"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:backgroundTint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/btn_login"
+            android:layout_marginTop="@dimen/divider_margin_25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_goneMarginTop="@dimen/divider_margin_gone"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue_google"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height"
+            android:layout_marginTop="@dimen/divider_margin_25"
+            android:backgroundTint="@color/white"
+            android:text="@string/continue_google"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:cornerRadius="@dimen/text_field_radius"
+            app:icon="@drawable/ic_google_24"
+            app:iconGravity="textStart"
+            app:iconTint="@null"
+            app:layout_constraintEnd_toEndOf="@id/divider"
+            app:layout_constraintStart_toStartOf="@id/divider"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:strokeWidth="@dimen/border_width"
+            tools:ignore="RtlHardcoded,RtlSymmetry,VisualLintButtonSize" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/no_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/email_margin_top"
+            android:text="@string/register_new_account"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintEnd_toStartOf="@id/btn_to_register"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_continue_google" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btn_to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/to_login_margin_start"
+            android:text="@string/to_register"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/no_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/no_account" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

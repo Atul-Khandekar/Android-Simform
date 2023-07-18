@@ -1,4 +1,4 @@
-package com.example.shopkart.adapters
+package com.example.trainingproject.adapters
 
 import android.util.Log
 import android.view.LayoutInflater
