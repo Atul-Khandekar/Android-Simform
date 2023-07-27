@@ -6,11 +6,11 @@ import android.widget.TextView
 import com.example.shopkart.R
 import com.google.android.material.tabs.TabLayout
 
-class MainActivity : AppCompatActivity() {
+class GeminiActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_gemini)
         val tablayOut = findViewById<TabLayout>(R.id.tabBar)
         tablayOut.addTab(tablayOut.newTab().setText(R.string.limit))
         tablayOut.addTab(tablayOut.newTab().setText(R.string.market))
