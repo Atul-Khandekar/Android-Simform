@@ -1,4 +1,4 @@
-package com.example.shopkart.views
+package com.example.trainingproject.views
 
 import android.net.Uri
 import android.os.Bundle
